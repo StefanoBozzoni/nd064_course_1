@@ -29,8 +29,8 @@ on:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: .
-          file: ./Dockerfile
+          context: ./project/techtrends
+          file: ./Dockerfile_techtrends
           platforms: linux/amd64
           push: true
           tags: 6420328/techtrends:latest
