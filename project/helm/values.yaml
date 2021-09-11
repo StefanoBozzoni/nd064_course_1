@@ -1,0 +1,30 @@
+namespace:
+  name: sandbox
+ 
+image:
+  repository: 6420328/techtrends 
+  tag: latest
+  pullpolicy: ifNotPresent
+
+resources:
+  requests:
+    cpu: 250m
+    memory: 64Mi
+  limits:
+    cpu: 500m
+    memory: 128Mi
+
+service:
+  type: ClusterIP
+  port: 4111
+  targePort: 3111
+  protocol: TCP
+
+containerPort: 3111
+
+livenessProbePath:
+  /healtz
+readinessProbePath:
+  /healtz
+
+replicaCount: 1
