@@ -4,7 +4,7 @@ namespace:
 image:
   repository: 6420328/techtrends 
   tag: latest
-  pullpolicy: ifNotPresent
+  pullpolicy: IfNotPresent
 
 resources:
   requests:
